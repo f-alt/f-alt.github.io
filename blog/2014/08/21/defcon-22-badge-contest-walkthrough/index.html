@@ -9,7 +9,7 @@
 		<meta content="" name="description">
 		<meta content="f.alt" name="author">
 		
-		<title>f.alt</title>
+		<title>DEFCON 22 Badge Contest Walkthrough &mdash; f.alt</title>
 		
 		<!-- Styles -->
 		<link href="/stylesheets/main.css" rel="stylesheet">
@@ -44,11 +44,9 @@
 				</div> <!-- // .navi -->
 			</header>
 		
-				<!-- START OF index.html -->
+				<!-- START OF _layouts/post.html -->
 
-	
-		
-		<!-- START OF _includes/article.html -->
+<!-- START OF _includes/article.html -->
 <article>
 	<header>
 		<h1><a href="/blog/2014/08/21/defcon-22-badge-contest-walkthrough/">DEFCON 22 Badge Contest Walkthrough</a></h1>
@@ -949,198 +947,8 @@ Well done!</p>
 </article>
 <!-- END OF _includes/article.html -->
 
-	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/08/07/finally-here/">Finally here</a></h1>
-		<time>2014-08-07</time>
-	</header>
-		<div class="content">
-			<p>I CAN&rsquo;T BELIEVE IT! I&rsquo;M FINALLY AT DEFCON! Sadly it doesn&rsquo;t really get started until tomorrow morning (which is in a few hours now&hellip;). I walked the badge line and there are people already waiting.</p>
 
-<p>Sadly, all of my phone preperations may have been for nought, since as of right now I can&rsquo;t use a sim card! I have no idea what&rsquo;s gone wrong, but at this point my options are to wipe my phone or to live on the wifi&hellip; I guess I&rsquo;m going with the wifi option for now.</p>
-
-<p>I already met my first friend while waiting to board. Faily easy to spot as he was wearing a shirt with penguins on it.</p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/07/25/phone-prep/">Getting my phone ready for DEFCON</a></h1>
-		<time>2014-07-25</time>
-	</header>
-		<div class="content">
-			<p>This post was supposed to be a wonderful HOWTO on setting up your Android phone with a VPN connection that would fail shut, ie: block all non-vpn traffic out. Sadly, this mission has proven to much more difficult than I first envisioned.</p>
-
-<p>I&rsquo;m working under the assumption that at DEFCON (the world&rsquo;s most hostile network) as a first timer, I&rsquo;m going to get pwned. From that assumption, it follows that I can&rsquo;t bring any device with me that I&rsquo;m not willing to completely wipe. It also follows that I can&rsquo;t have any way to log into any of my regular accounts, ESPECIALLY those related to work. For that reason, I&rsquo;ve set up an ALTnernate identity, VPS, laptop and phone.</p>
-
-<p>Now that I&rsquo;ve finished all of that, I can work on trying to make it harder for me to get hacked. I&rsquo;ve heard a lot people suggest that I rely on cellular data, instead of the wi-fi at DEFCON, but spoofing a cell phone base station is entirely within the realm of possibility. Instead, I want to set up a system of my devices so that the only way to get internet is through an openvpn connection. I&rsquo;ve decided against running my own openvpn server, since I don&rsquo;t trust my skills enough to lock it down. Instead I purchase a VPN subscription. I found a few decent looking providers like Torguard, AirVPN, WiTopia and Private Internet Acess.</p>
-
-<p>My first attempts at setting things up involved <a href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn">OpenVPN for Android</a>. I had a few difficulties importing the config files from my VPN provider, but eventually I got things configured. Sadly I can&rsquo;t use this open source client, since 1) it doesn&rsquo;t allow me to block outgoing connections if the VPN isn&rsquo;t connected, and 2) IT WON&rsquo;T REMEMBER MY CREDENTIALS!! It&rsquo;s this second point that made me abandon this app, since I&rsquo;m using a password manager and a very long and impossible to remember password which I can&rsquo;t type in everytime.</p>
-
-<p>Next, I tried to set up IPSec through Android native VPN interface, but that didn&rsquo;t work. I almost resigned myself to using PPTP since there&rsquo;s a menu item in the VPN settings that reads &ldquo;Always on VPN&rdquo;, but it doesn&rsquo;t seem to work on Cyanogenmod 11&hellip;</p>
-
-<p>I&rsquo;ve settled on <a href="https://play.google.com/store/apps/details?id=net.openvpn.openvpn">OpenVPN Connect</a> for the time being, since it will connect at boot AND it remember my login details. Sadly, Android 4.3+ has this handy dandy confirmation dialogue that pops up whenever a vpn client starts asking whether you trust the app or not and it does not have an option to remember this decision&hellip;</p>
-
-<p>The next thing I&rsquo;m going to try and build is an iptables script that will disable all but VPN traffic.</p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/07/10/getting-ready/">getting ready!</a></h1>
-		<time>2014-07-10</time>
-	</header>
-		<div class="content">
-			<p>DC22 is only 4 weeks away! As this is my first one, I want to make sure I&rsquo;m extra prepared. I really don&rsquo;t want to end up on the wall of sheep!</p>
-
-<p>First step is securing my laptop. I&rsquo;m taking my trust m11x (R1) since it has like a 6 hour battery life. I haven&rsquo;t started configuring the software yet since I&rsquo;m still waiting to get my hands on a second harddrive (which is probably going to get slagged, or trapped in a <a href="http://xkcd.com/350/">fish bowl</a>). It&rsquo;s going to be running some debian or ubuntu derivative. I&rsquo;m tempted to run my own openvpn server, but I&rsquo;m pretty sure that&rsquo;s just asking for trouble, so I&rsquo;ll be buying vpn access for the length of the con. I will also be using iptables to ensure that no connection gets out until the vpn tunnel has connected.</p>
-
-<p>Second step is to secure my phone. I found <a href="http://www.readysim.com/">ready sim</a> which looks like an excellent for use at defcon. I&rsquo;m working under the assumption that we&rsquo;re at the point where people shouldn&rsquo;t just worry about rogue wi-fi APs, but rogue cell stations too! Thankfully my phone will be rooted, so I can ensure that all my traffic is over a VPN.</p>
-
-<p>Final step is setting up this box. I figure at some point I&rsquo;ll need to host something (a tracker, a wiki, an irc server), but I&rsquo;d rather not use a box that&rsquo;s connected to me right now, and I need to be able to press the destroy button when the con is over.</p>
-
-<p>I&rsquo;ll post more howtos later with specifics.</p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/06/07/pre-con-doodles/">pre-con doodles</a></h1>
-		<time>2014-06-07</time>
-	</header>
-		<div class="content">
-			<p><img src="http://i.imgur.com/P21WYVv.jpg" alt="Imgur" /></p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-		
-		<!-- START OF _includes/article.html -->
-<article>
-	<header>
-		<h1><a href="/blog/2014/06/06/defcon-prep/">Preparing for DEFCON</a></h1>
-		<time>2014-06-06</time>
-	</header>
-		<div class="content">
-			<p><img src="https://www.defcon.org/images/defcon-22/dc-22-web.jpg" alt="" /></p>
-
-<p>For the fist time, I will be attending DEF CON. I&rsquo;m getting ready to attend, but I&rsquo;d rather not have anything bad happen to me (or my digital identities) so I&rsquo;ll be creating a new persona, just for the event.</p>
-
-<p>I&rsquo;ve registered a new domain name, and set up a nice pristine VPS. I even managed to score a sweet new domain!</p>
-
-<p>I&rsquo;ll be posting more details, resources and such what as time goes on.</p>
-
-<p>STAY TUNED</p>
-
-			
-			
-		</div>
-	<footer>
-		
-
-
-		
-
-
-
-
-	
-	
-	</footer>
-	
-</article>
-<!-- END OF _includes/article.html -->
-
-	
-	
-<div class="pagination">
-	
-	
-	<span class="total">1 of 1</span>
-	
-	
-</div>
-<!-- END OF index.html -->
+<!-- END OF _/layouts/post.html -->
 
 		
 			<footer>
